@@ -180,10 +180,10 @@
 // Mobile Menu Overlay
 .mobile-overlay {
   position: fixed;
-  top: 0;
+  top: 80px; // Start below navbar
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 80px); // Full height minus navbar
   background: rgba(60, 36, 21, 0.8);
   backdrop-filter: blur(10px);
   z-index: 999;
@@ -199,14 +199,19 @@
   @media (min-width: 769px) {
     display: none;
   }
+  
+  @media (max-width: 768px) {
+    top: 70px; // Smaller navbar height on mobile
+    height: calc(100vh - 70px);
+  }
 }
 
 .mobile-menu {
   position: absolute;
-  top: 0;
+  top: 100%; // Start below the navbar
   right: 0;
   width: 300px;
-  height: 100vh;
+  height: calc(100vh - 80px); // Full height minus navbar
   background: var(--light-cream);
   transform: translateX(100%);
   transition: transform var(--transition-medium);
@@ -215,6 +220,10 @@
   
   .mobile-overlay.active & {
     transform: translateX(0);
+  }
+  
+  @media (max-width: 768px) {
+    height: calc(100vh - 70px); // Adjust for smaller mobile navbar
   }
 }
 
