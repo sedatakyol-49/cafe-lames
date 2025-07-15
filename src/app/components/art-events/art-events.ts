@@ -120,7 +120,7 @@ export class ArtEvents {
     {
       title: 'Lokale Künstler Präsentation',
       type: 'Kunstausstellung',
-      description: 'Entdecken Sie aufstrebendes Talent aus Istanbuls lebendiger Kunstszene in unserer monatlichen Präsentation.',
+      description: 'Entdecken Sie aufstrebendes Talent aus Kölns lebendiger Kunstszene in unserer monatlichen Präsentation.',
       day: '22',
       month: 'Feb',
       time: '18:00 - 22:00',
@@ -140,7 +140,7 @@ export class ArtEvents {
     {
       title: 'Jazz & Java Sessions',
       type: 'Musikaufführung',
-      description: 'Sanfte Jazz-Aufführungen jeden ersten Freitag im Monat. Heute mit dem Istanbul Trio.',
+      description: 'Sanfte Jazz-Aufführungen jeden ersten Freitag im Monat. Heute mit dem Köln Jazz Trio.',
       day: '8',
       month: 'Mär',
       time: '20:00 - 23:00',

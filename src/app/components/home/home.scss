@@ -42,12 +42,12 @@
   opacity: 0.1;
   animation: float 8s ease-in-out infinite;
   
-  &:nth-child(1) { top: 10%; left: 10%; animation-duration: 8s; }
-  &:nth-child(2) { top: 20%; right: 15%; animation-duration: 10s; }
-  &:nth-child(3) { top: 60%; left: 5%; animation-duration: 12s; }
-  &:nth-child(4) { top: 80%; right: 20%; animation-duration: 9s; }
-  &:nth-child(5) { top: 40%; left: 85%; animation-duration: 11s; }
-  &:nth-child(6) { top: 70%; right: 80%; animation-duration: 7s; }
+  &:nth-child(1) { top: 25%; left: 10%; animation-duration: 8s; }
+  &:nth-child(2) { top: 35%; right: 15%; animation-duration: 10s; }
+  &:nth-child(3) { top: 65%; left: 5%; animation-duration: 12s; }
+  &:nth-child(4) { top: 85%; right: 20%; animation-duration: 9s; }
+  &:nth-child(5) { top: 50%; left: 85%; animation-duration: 11s; }
+  &:nth-child(6) { top: 75%; right: 80%; animation-duration: 7s; }
 }
 
 @keyframes float {
@@ -64,10 +64,15 @@
   gap: var(--spacing-xxl);
   min-height: 80vh;
   
+  @media (max-width: 1024px) {
+    padding-top: 40px;
+  }
+  
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     text-align: center;
     gap: var(--spacing-lg);
+    padding-top: 60px;
   }
 }
 
@@ -204,6 +209,20 @@
 @keyframes orbit {
   from { transform: rotate(0deg) translateX(170px) rotate(0deg); }
   to { transform: rotate(360deg) translateX(170px) rotate(-360deg); }
+}
+
+@media (max-width: 1024px) {
+  @keyframes orbit {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+  }
+}
+
+@media (max-width: 768px) {
+  @keyframes orbit {
+    from { transform: rotate(0deg) translateX(130px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(130px) rotate(-360deg); }
+  }
 }
 
 // Scroll Indicator

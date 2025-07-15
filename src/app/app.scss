@@ -7,9 +7,9 @@
 .main-content {
   flex: 1;
   min-height: calc(100vh - 120px); // Account for navbar and footer
-  padding-top: 80px; // Space for fixed navbar
+  padding-top: 75px; // Space for desktop navbar
   
   @media (max-width: 768px) {
-    padding-top: 70px; // Smaller space for mobile navbar
+    padding-top: 70px; // Space for mobile navbar
   }
 }
