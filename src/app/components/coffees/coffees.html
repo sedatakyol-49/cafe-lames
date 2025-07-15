@@ -1,0 +1,67 @@
+<section class="coffees-hero section">
+  <div class="container">
+    <div class="hero-header text-center">
+      <h1>Our Coffee Collection</h1>
+      <p>Discover exceptional flavors from around the world, each cup crafted with passion and expertise</p>
+    </div>
+  </div>
+</section>
+
+<section class="coffees-grid section">
+  <div class="container">
+    <div class="coffee-cards">
+      <div class="coffee-card" *ngFor="let coffee of coffeeMenu">
+        <div class="card-image">
+          <span class="coffee-emoji">{{ coffee.emoji }}</span>
+        </div>
+        <div class="card-content">
+          <h3 class="coffee-name">{{ coffee.name }}</h3>
+          <p class="coffee-origin">{{ coffee.origin }}</p>
+          <p class="coffee-description">{{ coffee.description }}</p>
+          <div class="coffee-price">{{ coffee.price }}</div>
+          
+          <!-- Aroma Notes Section -->
+          <div class="aroma-notes">
+            <h4>Aroma Notes</h4>
+            <div class="notes-container">
+              <span class="note" *ngFor="let note of coffee.aromaNotes">
+                {{ note }}
+              </span>
+            </div>
+          </div>
+          
+          <!-- Strength and Roast Level -->
+          <div class="coffee-details">
+            <div class="detail">
+              <span class="label">Strength:</span>
+              <div class="strength-bar">
+                <div class="strength-fill" [style.width.%]="coffee.strength * 20"></div>
+              </div>
+            </div>
+            <div class="detail">
+              <span class="label">Roast:</span>
+              <span class="roast-level">{{ coffee.roastLevel }}</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-hover-overlay">
+          <button class="btn btn--primary">Order Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="brewing-methods section">
+  <div class="container">
+    <h2 class="text-center">Brewing Methods</h2>
+    <div class="methods-grid">
+      <div class="method-card" *ngFor="let method of brewingMethods">
+        <div class="method-icon">{{ method.icon }}</div>
+        <h3>{{ method.name }}</h3>
+        <p>{{ method.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

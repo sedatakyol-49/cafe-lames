@@ -1,0 +1,151 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-background">
+    <div class="hero-overlay"></div>
+    <div class="floating-elements">
+      <div class="floating-coffee" *ngFor="let item of floatingElements; let i = index" 
+           [style.animation-delay.s]="i * 0.5">☕</div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text" [@fadeInUp]>
+        <h1 class="hero-title">
+          <span class="title-line">Welcome to</span>
+          <span class="title-main">Café Lamés</span>
+        </h1>
+        <p class="hero-subtitle">
+          Where every cup tells a story and every corner inspires creativity
+        </p>
+        <div class="hero-buttons">
+          <a routerLink="/coffees" class="btn btn--primary">
+            Explore Our Coffees
+          </a>
+          <a routerLink="/about" class="btn btn--secondary">
+            Our Story
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual" [@slideInRight]>
+        <div class="coffee-cup">
+          <div class="steam-lines">
+            <div class="steam" *ngFor="let line of steamLines; let i = index"
+                 [style.animation-delay.s]="i * 0.3"></div>
+          </div>
+          <div class="cup-wrapper">
+            <div class="coffee-bean" *ngFor="let bean of coffeBeans; let i = index"
+                 [style.animation-delay.s]="i * 0.2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" [@bounce]>
+    <span class="scroll-text">Discover More</span>
+    <div class="scroll-arrow">↓</div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features section">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 [@fadeInUp]>Experience the Difference</h2>
+      <p [@fadeInUp]>Three pillars that make Café Lamés unique</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card" [@slideInLeft] *ngFor="let feature of features; let i = index"
+           [style.animation-delay.ms]="i * 200">
+        <div class="feature-icon">
+          <span [innerHTML]="feature.icon"></span>
+        </div>
+        <h3 class="feature-title">{{ feature.title }}</h3>
+        <p class="feature-description">{{ feature.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Coffee Showcase -->
+<section class="coffee-showcase section">
+  <div class="container">
+    <div class="showcase-content">
+      <div class="showcase-text" [@slideInLeft]>
+        <h2>Artisan Coffee</h2>
+        <p>Each cup is crafted with precision, passion, and the finest beans from around the world. Our master baristas transform simple ingredients into extraordinary experiences.</p>
+        <ul class="coffee-features">
+          <li>Single Origin Specialties</li>
+          <li>Expert Roasting Techniques</li>
+          <li>Sustainable Sourcing</li>
+          <li>Signature Blends</li>
+        </ul>
+        <a routerLink="/coffees" class="btn btn--primary">
+          Explore Our Menu
+        </a>
+      </div>
+      
+      <div class="showcase-visual" [@slideInRight]>
+        <div class="coffee-cards">
+          <div class="coffee-card" *ngFor="let coffee of showcaseCoffees; let i = index"
+               [style.animation-delay.ms]="i * 300">
+            <div class="card-image">
+              <span class="coffee-emoji">{{ coffee.emoji }}</span>
+            </div>
+            <h4>{{ coffee.name }}</h4>
+            <p>{{ coffee.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Art Gallery Preview -->
+<section class="art-preview section">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 [@fadeInUp]>Art Meets Coffee</h2>
+      <p [@fadeInUp]>Our space transforms into a gallery where local artists showcase their creativity</p>
+    </div>
+    
+    <div class="gallery-preview" [@staggerAnimation]>
+      <div class="art-piece" *ngFor="let art of artPieces; let i = index"
+           [style.animation-delay.ms]="i * 150">
+        <div class="art-frame">
+          <span class="art-emoji">{{ art.emoji }}</span>
+        </div>
+        <h4>{{ art.title }}</h4>
+        <p>{{ art.artist }}</p>
+      </div>
+    </div>
+    
+    <div class="gallery-cta text-center">
+      <a routerLink="/art-events" class="btn btn--secondary">
+        View Full Gallery
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content text-center" [@fadeInUp]>
+      <h2>Ready for an Experience?</h2>
+      <p>Join us for exceptional coffee, inspiring art, and unforgettable moments</p>
+      <div class="cta-buttons">
+        <a routerLink="/contact" class="btn btn--primary">
+          Visit Us Today
+        </a>
+        <a routerLink="/art-events" class="btn btn--secondary">
+          Upcoming Events
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

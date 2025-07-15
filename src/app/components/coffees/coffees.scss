@@ -1,0 +1,266 @@
+// Coffee Page Styles
+.coffees-hero {
+  background: linear-gradient(135deg, var(--cream) 0%, var(--light-cream) 100%);
+  
+  .hero-header {
+    h1 {
+      color: var(--coffee-brown);
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    p {
+      font-size: 1.2rem;
+      color: var(--olive-green);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.coffee-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.coffee-card {
+  position: relative;
+  background: var(--light-cream);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: all var(--transition-medium);
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-strong);
+    
+    .card-hover-overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .coffee-emoji {
+      transform: scale(1.2) rotate(10deg);
+    }
+    
+    .aroma-notes {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.card-image {
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+  background: linear-gradient(135deg, var(--rust-orange), var(--light-rust));
+  
+  .coffee-emoji {
+    font-size: 4rem;
+    transition: all var(--transition-medium);
+  }
+}
+
+.card-content {
+  padding: var(--spacing-lg);
+  
+  .coffee-name {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--coffee-brown);
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .coffee-origin {
+    color: var(--rust-orange);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .coffee-description {
+    color: var(--olive-green);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+  }
+  
+  .coffee-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--coffee-brown);
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-heading);
+  }
+}
+
+// Aroma Notes
+.aroma-notes {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-medium);
+  margin-bottom: var(--spacing-md);
+  
+  h4 {
+    font-size: 1rem;
+    color: var(--coffee-brown);
+    margin-bottom: var(--spacing-xs);
+    font-family: var(--font-heading);
+  }
+  
+  .notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+  }
+  
+  .note {
+    background: var(--cream);
+    color: var(--rust-orange);
+    padding: 0.3rem 0.6rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(210, 105, 30, 0.3);
+  }
+}
+
+// Coffee Details
+.coffee-details {
+  display: grid;
+  gap: var(--spacing-sm);
+  
+  .detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .label {
+      font-weight: 500;
+      color: var(--coffee-brown);
+      font-size: 0.9rem;
+    }
+    
+    .roast-level {
+      color: var(--rust-orange);
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.strength-bar {
+  width: 100px;
+  height: 6px;
+  background: rgba(139, 149, 86, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+  
+  .strength-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--olive-green), var(--rust-orange));
+    border-radius: 3px;
+    transition: width var(--transition-medium);
+  }
+}
+
+// Card Hover Overlay
+.card-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(60, 36, 21, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-medium);
+  
+  .btn {
+    transform: translateY(20px);
+    transition: transform var(--transition-medium);
+  }
+  
+  &.active .btn {
+    transform: translateY(0);
+  }
+}
+
+// Brewing Methods
+.brewing-methods {
+  background: var(--light-cream);
+  
+  h2 {
+    color: var(--coffee-brown);
+    margin-bottom: var(--spacing-xxl);
+  }
+}
+
+.methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.method-card {
+  background: var(--cream);
+  padding: var(--spacing-xl);
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  transition: all var(--transition-medium);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .method-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  h3 {
+    color: var(--coffee-brown);
+    margin-bottom: var(--spacing-sm);
+    font-family: var(--font-heading);
+  }
+  
+  p {
+    color: var(--olive-green);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .coffee-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .methods-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .methods-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .coffee-card {
+    .aroma-notes {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

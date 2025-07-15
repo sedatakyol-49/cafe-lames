@@ -1,0 +1,205 @@
+// Café Lamés Global Styles
+// Color palette: warm neutrals - cream, deep coffee brown, rust orange, soft olive green
+
+:root {
+  // Color Palette
+  --cream: #F7F3E9;
+  --light-cream: #FAF7F0;
+  --coffee-brown: #3C2415;
+  --dark-coffee: #2A1810;
+  --rust-orange: #D2691E;
+  --light-rust: #E07B39;
+  --olive-green: #8B9556;
+  --light-olive: #A4B168;
+  
+  // Typography
+  --font-heading: 'Dancing Script', cursive;
+  --font-body: 'Raleway', sans-serif;
+  
+  // Spacing
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+  --spacing-xxl: 6rem;
+  
+  // Transitions
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.6s ease;
+  --transition-slow: 1s ease;
+  
+  // Shadows
+  --shadow-soft: 0 8px 32px rgba(60, 36, 21, 0.1);
+  --shadow-medium: 0 12px 48px rgba(60, 36, 21, 0.15);
+  --shadow-strong: 0 16px 64px rgba(60, 36, 21, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--coffee-brown);
+  background-color: var(--cream);
+  overflow-x: hidden;
+}
+
+// Typography Styles
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+  margin-bottom: var(--spacing-sm);
+  font-size: clamp(1rem, 2vw, 1.125rem);
+}
+
+a {
+  color: var(--rust-orange);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  
+  &:hover {
+    color: var(--light-rust);
+  }
+}
+
+// Button Styles
+.btn {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-family: var(--font-body);
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  
+  &--primary {
+    background: linear-gradient(135deg, var(--rust-orange), var(--light-rust));
+    color: var(--cream);
+    box-shadow: var(--shadow-soft);
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-medium);
+    }
+  }
+  
+  &--secondary {
+    background: transparent;
+    color: var(--coffee-brown);
+    border: 2px solid var(--olive-green);
+    
+    &:hover {
+      background: var(--olive-green);
+      color: var(--cream);
+    }
+  }
+}
+
+// Container Styles
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  
+  @media (max-width: 768px) {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+.section {
+  padding: var(--spacing-xxl) 0;
+  
+  @media (max-width: 768px) {
+    padding: var(--spacing-lg) 0;
+  }
+}
+
+// Utility Classes
+.text-center {
+  text-align: center;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all var(--transition-medium);
+  
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all var(--transition-medium);
+  
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all var(--transition-medium);
+  
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Scrollbar Styling
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--olive-green);
+  border-radius: 4px;
+  
+  &:hover {
+    background: var(--rust-orange);
+  }
+}

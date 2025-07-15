@@ -1,0 +1,101 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="container">
+    <div class="navbar-content">
+      <!-- Logo Section -->
+      <div class="navbar-brand">
+        <a routerLink="/" class="brand-link">
+          <div class="logo">
+            <span class="logo-text">Café Lamés</span>
+            <span class="logo-subtitle">Where Coffee Meets Art</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="navbar-menu" [class.active]="isMenuOpen">
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">
+              <span class="link-text">Home</span>
+              <span class="link-underline"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/about" routerLinkActive="active" class="nav-link">
+              <span class="link-text">About Us</span>
+              <span class="link-underline"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/coffees" routerLinkActive="active" class="nav-link">
+              <span class="link-text">Our Coffees</span>
+              <span class="link-underline"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/art-events" routerLinkActive="active" class="nav-link">
+              <span class="link-text">Art & Events</span>
+              <span class="link-underline"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/contact" routerLinkActive="active" class="nav-link">
+              <span class="link-text">Contact</span>
+              <span class="link-underline"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button 
+        class="mobile-toggle" 
+        [class.active]="isMenuOpen"
+        (click)="toggleMenu()"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-overlay" [class.active]="isMenuOpen" (click)="closeMenu()">
+  <div class="mobile-menu">
+    <div class="mobile-menu-content">
+      <div class="mobile-brand">
+        <span class="mobile-logo-text">Café Lamés</span>
+      </div>
+      <ul class="mobile-nav-links">
+        <li class="mobile-nav-item">
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="mobile-nav-link" (click)="closeMenu()">
+            Home
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a routerLink="/about" routerLinkActive="active" class="mobile-nav-link" (click)="closeMenu()">
+            About Us
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a routerLink="/coffees" routerLinkActive="active" class="mobile-nav-link" (click)="closeMenu()">
+            Our Coffees
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a routerLink="/art-events" routerLinkActive="active" class="mobile-nav-link" (click)="closeMenu()">
+            Art & Events
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a routerLink="/contact" routerLinkActive="active" class="mobile-nav-link" (click)="closeMenu()">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div> 
