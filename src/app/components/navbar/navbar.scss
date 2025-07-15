@@ -208,22 +208,23 @@
 
 .mobile-menu {
   position: absolute;
-  top: 100%; // Start below the navbar
+  top: 0;
   right: 0;
   width: 300px;
-  height: calc(100vh - 80px); // Full height minus navbar
+  height: 100%;
   background: var(--light-cream);
   transform: translateX(100%);
   transition: transform var(--transition-medium);
   overflow-y: auto;
   box-shadow: var(--shadow-strong);
+  z-index: 1001;
   
   .mobile-overlay.active & {
     transform: translateX(0);
   }
   
-  @media (max-width: 768px) {
-    height: calc(100vh - 70px); // Adjust for smaller mobile navbar
+  @media (max-width: 480px) {
+    width: 280px;
   }
 }
 
@@ -232,6 +233,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1002;
 }
 
 .mobile-brand {
@@ -306,22 +309,11 @@
   }
 }
 
-// Smooth animations for mobile menu items
+// Mobile menu items - always visible for reliability
 .mobile-nav-item {
-  opacity: 0;
-  transform: translateY(20px);
+  opacity: 1;
+  transform: translateY(0);
   transition: all var(--transition-medium);
-  
-  .mobile-overlay.active & {
-    opacity: 1;
-    transform: translateY(0);
-    
-    @for $i from 1 through 10 {
-      &:nth-child(#{$i}) {
-        transition-delay: #{$i * 0.1}s;
-      }
-    }
-  }
 }
 
 // Responsive Design
