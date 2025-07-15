@@ -56,18 +56,18 @@ export class Home implements OnInit {
   features = [
     {
       icon: '☕',
-      title: 'Artisan Coffee',
-      description: 'Expertly crafted from the finest beans, each cup tells a unique story of flavor and passion.'
+      title: 'Handwerklicher Kaffee',
+      description: 'Fachmännisch aus den besten Bohnen zubereitet, erzählt jede Tasse eine einzigartige Geschichte von Geschmack und Leidenschaft.'
     },
     {
       icon: '🎨',
-      title: 'Art Gallery',
-      description: 'Our walls come alive with rotating exhibitions featuring local and international artists.'
+      title: 'Kunstgalerie',
+      description: 'Unsere Wände erwachen mit wechselnden Ausstellungen lokaler und internationaler Künstler zum Leben.'
     },
     {
       icon: '🌱',
-      title: 'Sustainability',
-      description: 'Committed to ethical sourcing and eco-friendly practices that protect our planet.'
+      title: 'Nachhaltigkeit',
+      description: 'Verpflichtet zu ethischer Beschaffung und umweltfreundlichen Praktiken, die unseren Planeten schützen.'
     }
   ];
 
@@ -75,18 +75,18 @@ export class Home implements OnInit {
   showcaseCoffees = [
     {
       emoji: '☕',
-      name: 'Signature Blend',
-      description: 'Rich, full-bodied with notes of chocolate and caramel'
+      name: 'Signature-Mischung',
+      description: 'Reich, vollmundig mit Noten von Schokolade und Karamell'
     },
     {
       emoji: '🌰',
       name: 'Single Origin',
-      description: 'Pure, unblended flavors from specific regions'
+      description: 'Reine, unvermischte Aromen aus bestimmten Regionen'
     },
     {
       emoji: '🥛',
-      name: 'Specialty Drinks',
-      description: 'Creative lattes and innovative coffee cocktails'
+      name: 'Spezialgetränke',
+      description: 'Kreative Lattes und innovative Kaffee-Cocktails'
     }
   ];
 
@@ -94,22 +94,22 @@ export class Home implements OnInit {
   artPieces = [
     {
       emoji: '🖼️',
-      title: 'Urban Dreams',
+      title: 'Städtische Träume',
       artist: 'Sarah Mitchell'
     },
     {
       emoji: '🎭',
-      title: 'Coffee Stories',
+      title: 'Kaffee-Geschichten',
       artist: 'Marcus Chen'
     },
     {
       emoji: '🌿',
-      title: 'Natural Harmony',
+      title: 'Natürliche Harmonie',
       artist: 'Elena Rodriguez'
     },
     {
       emoji: '🌟',
-      title: 'Abstract Feelings',
+      title: 'Abstrakte Gefühle',
       artist: 'David Kim'
     }
   ];

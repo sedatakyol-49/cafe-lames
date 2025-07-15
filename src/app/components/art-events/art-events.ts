@@ -39,68 +39,68 @@ export class ArtEvents {
   @ViewChild('galleryTrack') galleryTrack!: ElementRef;
 
   currentExhibition: Exhibition = {
-    title: 'Urban Rhythms',
+    title: 'Städtische Rhythmen',
     artist: 'Elena Marchetti',
-    description: 'A captivating exploration of city life through abstract expressionism, where vibrant colors and dynamic brushstrokes capture the pulse of modern urban existence.',
-    opening: 'January 15, 2024',
-    duration: 'January 15 - March 30, 2024',
+    description: 'Eine fesselnde Erkundung des Stadtlebens durch abstrakten Expressionismus, bei der lebendige Farben und dynamische Pinselstriche den Puls der modernen städtischen Existenz einfangen.',
+    opening: '15. Januar 2024',
+    duration: '15. Januar - 30. März 2024',
     emoji: '🎨'
   };
 
   artworks: Artwork[] = [
     {
-      title: 'Morning Brew',
+      title: 'Morgengebräu',
       artist: 'Sarah Chen',
-      medium: 'Oil on Canvas',
+      medium: 'Öl auf Leinwand',
       price: '₺2,500',
       emoji: '🌅'
     },
     {
-      title: 'Coffee Dreams',
+      title: 'Kaffee-Träume',
       artist: 'Marcus Rodriguez',
-      medium: 'Digital Art',
+      medium: 'Digitale Kunst',
       price: '₺1,800',
       emoji: '☕'
     },
     {
-      title: 'Steam & Stories',
+      title: 'Dampf & Geschichten',
       artist: 'Aisha Patel',
-      medium: 'Watercolor',
+      medium: 'Aquarell',
       price: '₺2,200',
       emoji: '💭'
     },
     {
-      title: 'Café Conversations',
+      title: 'Café-Gespräche',
       artist: 'David Kim',
-      medium: 'Photography',
+      medium: 'Fotografie',
       price: '₺1,500',
       emoji: '📸'
     },
     {
-      title: 'Bean Ballet',
+      title: 'Bohnen-Ballett',
       artist: 'Luna Martinez',
-      medium: 'Sculpture',
+      medium: 'Skulptur',
       price: '₺3,200',
       emoji: '🎭'
     },
     {
-      title: 'Roasted Reflections',
+      title: 'Geröstete Reflexionen',
       artist: 'James Wilson',
-      medium: 'Mixed Media',
+      medium: 'Mischtechnik',
       price: '₺2,800',
       emoji: '🪞'
     },
     {
-      title: 'Espresso Emotions',
+      title: 'Espresso-Emotionen',
       artist: 'Maria Santos',
-      medium: 'Acrylic',
+      medium: 'Acryl',
       price: '₺2,100',
       emoji: '💫'
     },
     {
-      title: 'The Perfect Cup',
+      title: 'Die perfekte Tasse',
       artist: 'Ahmed Hassan',
-      medium: 'Charcoal Drawing',
+      medium: 'Kohlezeichnung',
       price: '₺1,600',
       emoji: '🎯'
     }
@@ -108,43 +108,43 @@ export class ArtEvents {
 
   upcomingEvents: Event[] = [
     {
-      title: 'Poetry & Coffee Evening',
-      type: 'Literary Event',
-      description: 'Join us for an intimate evening of spoken word poetry paired with our finest single-origin blends.',
+      title: 'Poesie & Kaffee Abend',
+      type: 'Literarische Veranstaltung',
+      description: 'Begleiten Sie uns zu einem intimen Abend mit gesprochener Poesie, gepaart mit unseren besten Single-Origin-Mischungen.',
       day: '15',
       month: 'Feb',
-      time: '7:00 PM - 9:00 PM',
-      ticketInfo: 'Free Entry',
+      time: '19:00 - 21:00',
+      ticketInfo: 'Freier Eintritt',
       icon: '📖'
     },
     {
-      title: 'Local Artists Showcase',
-      type: 'Art Exhibition',
-      description: 'Discover emerging talent from Istanbul\'s vibrant art scene in our monthly showcase.',
+      title: 'Lokale Künstler Präsentation',
+      type: 'Kunstausstellung',
+      description: 'Entdecken Sie aufstrebendes Talent aus Istanbuls lebendiger Kunstszene in unserer monatlichen Präsentation.',
       day: '22',
       month: 'Feb',
-      time: '6:00 PM - 10:00 PM',
-      ticketInfo: 'Free Entry',
+      time: '18:00 - 22:00',
+      ticketInfo: 'Freier Eintritt',
       icon: '🎨'
     },
     {
-      title: 'Coffee Cupping Workshop',
-      type: 'Educational',
-      description: 'Learn the art of coffee tasting with our master barista. Includes tasting of 6 different origins.',
+      title: 'Kaffee-Verkostungs-Workshop',
+      type: 'Bildungsveranstaltung',
+      description: 'Lernen Sie die Kunst der Kaffeeverkostung mit unserem Barista-Meister. Beinhaltet die Verkostung von 6 verschiedenen Ursprungsländern.',
       day: '1',
-      month: 'Mar',
-      time: '2:00 PM - 4:00 PM',
-      ticketInfo: '₺150 per person',
+      month: 'Mär',
+      time: '14:00 - 16:00',
+      ticketInfo: '₺150 pro Person',
       icon: '☕'
     },
     {
       title: 'Jazz & Java Sessions',
-      type: 'Music Performance',
-      description: 'Smooth jazz performances every first Friday of the month. Tonight featuring the Istanbul Trio.',
+      type: 'Musikaufführung',
+      description: 'Sanfte Jazz-Aufführungen jeden ersten Freitag im Monat. Heute mit dem Istanbul Trio.',
       day: '8',
-      month: 'Mar',
-      time: '8:00 PM - 11:00 PM',
-      ticketInfo: '₺100 entry + drink',
+      month: 'Mär',
+      time: '20:00 - 23:00',
+      ticketInfo: '₺100 Eintritt + Getränk',
       icon: '🎷'
     }
   ];

@@ -1,8 +1,8 @@
 <section class="art-hero section">
   <div class="container">
     <div class="hero-header text-center">
-      <h1>Art & Events</h1>
-      <p>Where creativity flows as freely as our coffee - discover inspiring exhibitions and cultural experiences</p>
+      <h1>Kunst & Veranstaltungen</h1>
+      <p>Wo Kreativität so frei fließt wie unser Kaffee - entdecken Sie inspirierende Ausstellungen und kulturelle Erfahrungen</p>
     </div>
   </div>
 </section>
@@ -12,22 +12,22 @@
   <div class="container">
     <div class="exhibition-content">
       <div class="exhibition-info">
-        <span class="exhibition-label">Current Exhibition</span>
+        <span class="exhibition-label">Aktuelle Ausstellung</span>
         <h2>{{ currentExhibition.title }}</h2>
-        <p class="artist-name">By {{ currentExhibition.artist }}</p>
+        <p class="artist-name">Von {{ currentExhibition.artist }}</p>
         <p class="exhibition-description">{{ currentExhibition.description }}</p>
         <div class="exhibition-details">
           <div class="detail">
-            <strong>Opening:</strong> {{ currentExhibition.opening }}
+            <strong>Eröffnung:</strong> {{ currentExhibition.opening }}
           </div>
           <div class="detail">
-            <strong>Duration:</strong> {{ currentExhibition.duration }}
+            <strong>Dauer:</strong> {{ currentExhibition.duration }}
           </div>
           <div class="detail">
-            <strong>Location:</strong> Gallery Wall & Main Space
+            <strong>Ort:</strong> Galeriewand & Hauptraum
           </div>
         </div>
-        <button class="btn btn--primary">Learn More</button>
+        <button class="btn btn--primary">Mehr erfahren</button>
       </div>
       <div class="exhibition-visual">
         <div class="art-frame featured">
@@ -41,7 +41,7 @@
 <!-- Horizontal Gallery -->
 <section class="gallery-section section">
   <div class="container">
-    <h2>Featured Artworks</h2>
+    <h2>Ausgewählte Kunstwerke</h2>
     <div class="gallery-scroll">
       <div class="gallery-track" #galleryTrack>
         <div class="art-card" *ngFor="let artwork of artworks">
@@ -58,8 +58,8 @@
       </div>
       
       <!-- Navigation Arrows -->
-      <button class="gallery-nav prev" (click)="scrollGallery('left')" aria-label="Previous">‹</button>
-      <button class="gallery-nav next" (click)="scrollGallery('right')" aria-label="Next">›</button>
+      <button class="gallery-nav prev" (click)="scrollGallery('left')" aria-label="Vorherige">‹</button>
+      <button class="gallery-nav next" (click)="scrollGallery('right')" aria-label="Nächste">›</button>
     </div>
   </div>
 </section>
@@ -67,7 +67,7 @@
 <!-- Upcoming Events -->
 <section class="events-section section">
   <div class="container">
-    <h2 class="text-center">Upcoming Events</h2>
+    <h2 class="text-center">Kommende Veranstaltungen</h2>
     <div class="events-grid">
       <div class="event-card" *ngFor="let event of upcomingEvents">
         <div class="event-date">
@@ -93,11 +93,11 @@
 <section class="artist-cta section">
   <div class="container">
     <div class="cta-content text-center">
-      <h2>Are You an Artist?</h2>
-      <p>We're always looking for talented artists to showcase their work in our space</p>
+      <h2>Sind Sie ein Künstler?</h2>
+      <p>Wir suchen immer talentierte Künstler, die ihre Arbeiten in unserem Raum präsentieren möchten</p>
       <div class="cta-buttons">
-        <button class="btn btn--primary">Submit Your Portfolio</button>
-        <button class="btn btn--secondary">Artist Guidelines</button>
+        <button class="btn btn--primary">Portfolio einreichen</button>
+        <button class="btn btn--secondary">Künstler-Richtlinien</button>
       </div>
     </div>
   </div>

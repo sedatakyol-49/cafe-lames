@@ -28,86 +28,86 @@ export class Coffees {
   
   coffeeMenu: Coffee[] = [
     {
-      name: 'Lamés Signature Blend',
-      origin: 'Colombia & Ethiopia',
-      description: 'Our house blend combines the rich, chocolatey notes of Colombian beans with the bright, floral characteristics of Ethiopian highlands.',
+      name: 'Lamés Signature-Mischung',
+      origin: 'Kolumbien & Äthiopien',
+      description: 'Unsere Hausmischung kombiniert die reichen, schokoladigen Noten kolumbianischer Bohnen mit den hellen, blumigen Eigenschaften äthiopischer Hochländer.',
       price: '₺45',
       emoji: '☕',
-      aromaNotes: ['Chocolate', 'Citrus', 'Caramel', 'Floral'],
+      aromaNotes: ['Schokolade', 'Zitrus', 'Karamell', 'Blumig'],
       strength: 4,
-      roastLevel: 'Medium'
+      roastLevel: 'Mittel'
     },
     {
-      name: 'Ethiopian Yirgacheffe',
-      origin: 'Yirgacheffe, Ethiopia',
-      description: 'A bright and complex single origin with wine-like acidity and distinctive floral and tea-like qualities.',
+      name: 'Äthiopischer Yirgacheffe',
+      origin: 'Yirgacheffe, Äthiopien',
+      description: 'Ein heller und komplexer Single Origin mit weinähnlicher Säure und ausgeprägten blumigen und teeähnlichen Qualitäten.',
       price: '₺55',
       emoji: '🌸',
-      aromaNotes: ['Floral', 'Tea-like', 'Lemon', 'Bergamot'],
+      aromaNotes: ['Blumig', 'Teeähnlich', 'Zitrone', 'Bergamotte'],
       strength: 3,
-      roastLevel: 'Light'
+      roastLevel: 'Hell'
     },
     {
       name: 'Guatemala Antigua',
       origin: 'Antigua, Guatemala',
-      description: 'Full-bodied with a rich, smoky flavor profile enhanced by the volcanic soil of the Antigua valley.',
+      description: 'Vollmundig mit einem reichen, rauchigen Geschmacksprofil, verstärkt durch die vulkanische Erde des Antigua-Tals.',
       price: '₺50',
       emoji: '🌋',
-      aromaNotes: ['Smoky', 'Chocolate', 'Spice', 'Nutty'],
+      aromaNotes: ['Rauchig', 'Schokolade', 'Gewürze', 'Nussig'],
       strength: 5,
-      roastLevel: 'Dark'
+      roastLevel: 'Dunkel'
     },
     {
-      name: 'Brazilian Santos',
-      origin: 'São Paulo, Brazil',
-      description: 'A smooth, well-balanced coffee with low acidity and sweet, nutty undertones perfect for espresso.',
+      name: 'Brasilianischer Santos',
+      origin: 'São Paulo, Brasilien',
+      description: 'Ein glatter, ausgewogener Kaffee mit geringer Säure und süßen, nussigen Untertönen, perfekt für Espresso.',
       price: '₺40',
       emoji: '🥜',
-      aromaNotes: ['Nutty', 'Sweet', 'Caramel', 'Vanilla'],
+      aromaNotes: ['Nussig', 'Süß', 'Karamell', 'Vanille'],
       strength: 3,
-      roastLevel: 'Medium'
+      roastLevel: 'Mittel'
     },
     {
       name: 'Jamaica Blue Mountain',
-      origin: 'Blue Mountains, Jamaica',
-      description: 'One of the world\'s most prized coffees, known for its mild flavor and lack of bitterness.',
+      origin: 'Blue Mountains, Jamaika',
+      description: 'Einer der wertvollsten Kaffees der Welt, bekannt für seinen milden Geschmack und das Fehlen von Bitterkeit.',
       price: '₺85',
       emoji: '🏔️',
-      aromaNotes: ['Mild', 'Sweet', 'Floral', 'Clean'],
+      aromaNotes: ['Mild', 'Süß', 'Blumig', 'Sauber'],
       strength: 2,
-      roastLevel: 'Medium-Light'
+      roastLevel: 'Mittel-Hell'
     },
     {
-      name: 'Costa Rican Tarrazú',
+      name: 'Costa-ricanischer Tarrazú',
       origin: 'Tarrazú, Costa Rica',
-      description: 'Bright acidity with a full body, featuring notes of citrus and chocolate with a clean finish.',
+      description: 'Helle Säure mit vollem Körper, mit Noten von Zitrus und Schokolade und einem sauberen Abgang.',
       price: '₺48',
       emoji: '🍊',
-      aromaNotes: ['Citrus', 'Chocolate', 'Bright', 'Clean'],
+      aromaNotes: ['Zitrus', 'Schokolade', 'Hell', 'Sauber'],
       strength: 4,
-      roastLevel: 'Medium'
+      roastLevel: 'Mittel'
     }
   ];
 
   brewingMethods: BrewingMethod[] = [
     {
       name: 'Espresso',
-      description: 'Intense, concentrated shot perfect for pure coffee lovers',
+      description: 'Intensiver, konzentrierter Schuss, perfekt für pure Kaffeeliebhaber',
       icon: '☕'
     },
     {
       name: 'Pour Over',
-      description: 'Hand-poured method highlighting unique flavor profiles',
+      description: 'Handgegossene Methode, die einzigartige Geschmacksprofile hervorhebt',
       icon: '💧'
     },
     {
       name: 'French Press',
-      description: 'Full immersion brewing for rich, full-bodied coffee',
+      description: 'Vollständige Immersionsbrühung für reichen, vollmundigen Kaffee',
       icon: '🫖'
     },
     {
       name: 'Cold Brew',
-      description: 'Smooth, low-acid coffee brewed slowly with cold water',
+      description: 'Glatter, säurearmer Kaffee, langsam mit kaltem Wasser gebrüht',
       icon: '🧊'
     }
   ];
