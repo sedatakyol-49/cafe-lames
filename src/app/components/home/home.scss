@@ -482,6 +482,26 @@
     margin-bottom: var(--spacing-xl);
     color: rgba(250, 247, 240, 0.9);
   }
+  
+  // Fix button visibility on dark background
+  .btn {
+    &--primary {
+      // Primary button is already fine with light text
+      color: var(--cream);
+    }
+    
+    &--secondary {
+      color: var(--light-cream);
+      border-color: var(--light-cream);
+      background: transparent;
+      
+      &:hover {
+        background: var(--light-cream);
+        color: var(--coffee-brown);
+        border-color: var(--light-cream);
+      }
+    }
+  }
 }
 
 .cta-buttons {
